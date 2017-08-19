@@ -14,14 +14,16 @@ public class Magic8Ball {
 
 		for (int i = 0; i < 10; i++) {
 
-			JOptionPane.showInputDialog("plz enter a yes or no question");
+			String question=JOptionPane.showInputDialog("plz enter a yes or no question or type q to quit");
 			if (randomNumder == 0) {
 				JOptionPane.showMessageDialog(null, "yes");
 			} else if (randomNumder == 1) {
 				JOptionPane.showMessageDialog(null, "no");
 			} else if (randomNumder == 2) {
 				JOptionPane.showMessageDialog(null, "Maybe you should ask Google?");
-			} else {
+			} else if (question.equals("q")) {
+				//break out of loop
+			}else {
 				JOptionPane.showMessageDialog(null, "plz ask someone that is smarter than me?");
 			}
 		}
